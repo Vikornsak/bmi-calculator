@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MUMT BMI Report</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="p-2 mt-4 text-center ">
+      
+        <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo" class="mb-4" style="max-width: 250px;">
+        
+      </div>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-md-10 col-sm-12">
+                <h1 class="text-center mb-4">BMI Report</h1>
+                <table class="table  table-striped ">
+                    <thead>
+                        <tr>
+                            <th>Weight (kg)</th>
+                            <th>Height (cm)</th>
+                            <th>BMI</th>
+                            <th>Category</th>
+                            <th>Record Time</th>
+                        </tr>
+                    </thead>
+                    <tbody >
+                        {% for record in data %}
+                        <tr>
+                            <td>{{ record['Weight (kg)'] }}</td>
+                            <td>{{ record['Height (cm)'] }}</td>
+                            <td>{{ record['BMI'] }}</td>
+                            <td>{{ record['Category'] }}</td>
+                            <td>{{ record['Record Time'] }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+                <div class="text-center mt-4">
+                    <a href="{{ url_for('index') }}" class="btn btn-primary">Go Back</a>
+                    <a href="{{ url_for('download_file') }}" class="btn btn-success">Download Excel File</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

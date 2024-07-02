@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Explanation</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container mt-5 text-center">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-md-10 col-sm-12 text-center">
+                <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo" class="mb-4"
+                    style="max-width: 150px;">
+                <div class="card">
+                    <div class="card-header">
+                        <h1 class="mb-4">BMI Explanation</h1>
+                    </div>
+                    <div class="card-body">
+                        <p class="lead">The Body Mass Index (BMI) is a measure that uses your height and weight to work
+                            out if your weight is healthy.</p>
+                        <p>In the metric system, the BMI formula is:</p>
+                        <p class="py-5 h2"><strong>BMI = weight (kg) / (height (m))<sup>2</sup></strong></p>
+                    </div>
+
+                    <div class="card-body text-left">
+                        <p>Where:</p>
+                        <div class="text-center">
+                            <ul class="list-unstyled">
+                                <li><strong>weight</strong> is in kilograms (kg)</li>
+                                <li><strong>height</strong> is in meters (m)</li>
+                            </ul>
+                        </div>
+                      
+                        <p>For example, if your weight is 70 kg and your height is 1.75 meters:</p>
+                        <p class="text-center"><strong>BMI = 70 / (1.75)<sup>2</sup> = 22.86</strong></p>
+                    
+                        <p>Where height is converted from centimeters to meters by dividing by 100 (Height (m)=Height (cm)100Height (m)=100Height (cm)​).</p>
+                 
+                    
+                    </div>
+                    <div class="card-body text-left">
+                        <h6>BMI Categories:
+                        </h6>
+                        <ul class="">
+                            <li>BMI less than 18.5: <strong>Underweight</strong> </li>
+                            <li>BMI 18.5 to 24.9: <strong>Normal weight</strong> </li>
+                            <li>BMI 25.0 to 29.9: <strong>Overweight</strong> </li>
+                            <li>BMI 30.0 and above: <strong>Obesity</strong> </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+          
+        </div>
+        <a href="{{ url_for('index') }}" class="btn btn-primary mt-4">Go Back to Home</a>
+    </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
